@@ -29,11 +29,12 @@ if [[ `ruby -v` == "ruby 1"* ]]; then
   git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
   echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
   exec $SHELL
-  
+
   rbenv install 2.5.0
   rbenv rehash
   # rbenv local 2.5.0
   rbenv global 2.5.0
+  echo "-----> Using `ruby -v`"
 else
   echo "-----> Using `ruby -v`"
 fi
